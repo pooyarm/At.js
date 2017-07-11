@@ -70,3 +70,34 @@
     color: #777;
     font-weight: normal;
 }
+
+/* Our Updates */
+.atwho-view-header {
+  color: #111;
+  background-color: #eee;
+  border-color: #ddd;
+  padding: 0 10px;
+  display: block;
+  height: 30px;
+  line-height: 29px;
+  font-size: 13px;
+}
+.atwho-view-header > img {
+  height: 17px;
+  width: auto;
+  vertical-align: sub;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.atwho-view {
+  box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px;
+}
+.command-item span.command {
+  color: #3c3c3c;
+  font-size: 14px;
+  font-weight: 900;
+}
+.command-item.cur span.command {
+  color: #fff;
+}
