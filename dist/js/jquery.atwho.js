@@ -1153,6 +1153,7 @@
                     $ul.append($li);
                 }
             }
+            this.bindEvent();
             //-
             this.show();
             if (this.context.getOpt('highlightFirst')) {
