@@ -1129,7 +1129,7 @@
 
         View.prototype.render = function(list) {
             var $li, $ul, i, item, len, li, tpl;
-            if (!($.isArray(list) && list.length > 0)) {
+            if (!($.isArray(list) && list.length > 0) || (typeof this.context.getOpt('customConditionToShow') == 'function' && this.context.getOpt('customConditionToShow').call(this) == false) ) {
                 this.hide();
                 return;
             }
@@ -1234,6 +1234,7 @@
         headingTpl: '${title}',
         //-
         insertTpl: '${atwho-at}${name}',
+        customConditionToShow: function(){ return true; },
         headerTpl: null,
         callbacks: DEFAULT_CALLBACKS,
         functionOverrides: {},
