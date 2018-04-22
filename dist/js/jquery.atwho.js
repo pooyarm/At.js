@@ -1084,11 +1084,11 @@
             var scrollDuration;
             scrollDuration = this.context.getOpt('scrollDuration');
             if (scrollDuration) {
-                return this.$elUl.animate({
+                return this.$el.animate({
                     scrollTop: scrollTop
                 }, scrollDuration);
             } else {
-                return this.$elUl.scrollTop(scrollTop);
+                return this.$el.scrollTop(scrollTop);
             }
         };
 
@@ -1156,8 +1156,13 @@
             this.bindEvent();
             //-
             this.show();
+            //p
+            if ((ref = this.context.callbacks('afterRender')) != null) {
+                ref.call(this.context);
+            }
+            //-
             if (this.context.getOpt('highlightFirst')) {
-                return $ul.find('li:first').addClass('cur');
+                return this.$el.find('li:first').addClass('cur');
             }
         };
 
